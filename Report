@@ -1,0 +1,20 @@
+Introduction: You have a successful restaurant, and would like to open another in a similar part of town. Zip/postal code boundaries are too artificial, you'd like to know how different areas segment geographically AND by content of vendors. This service is valuable to anyone looking to understand the real boundaries of venues in a city and how similar/dissimilar they are from one another.
+
+Data: By using the venues endpoint, I can retrieve the following datapoints to cluster venues geographically, then cluster these neighborhoods by content to find similar/dissimilar areas of the city. I'll also use the likes endpoint to scale each venue marker to the number of likes, which should be a proxy for volume. The categories endpoint will help me define category types and subcategories for each venue.
+
+Features:
+- id
+- name
+- latitude
+- longitude
+- categories
+    - used to find category type and subcategory
+- likes
+Methodology: I started by exploring the data points offered by Foursquare. Unfortunately, a lot of great information like stats, hours, popular, price, rating, phrases, etc., etc. were only available through the premium "Details" endpoint. These would have allowed a much more in-depth analysis that allowed this service to add value to a more specific base of people. I also looked at supplementing this data with data from the Twitter API, but found that extrapolating information from tweets would have yielded little additional value without a substantial investment in time, and most tweets aren't geotagged so that adds another challenge.
+
+Ultimately, I chose to stick with some basic Foursquare endpoints (explore, categories, likes) and build a basic model with these.
+
+Conclusions:
+
+There are several neighborhoods in the green sector at the top of the map, which have been clustered together by their content.
+You can see some areas in opposite areas of the city (Moscow in this case) which are similar. If you had a successful business in one of these areas, another one in another part of town might be the right location for you!
